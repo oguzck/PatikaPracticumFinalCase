@@ -23,3 +23,6 @@ React-bootstrap
 React-icons
 
 
+Also You can checkout the live version : 
+https://patika-practicum-final-case.vercel.app/
+
