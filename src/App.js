@@ -1,24 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes,Route } from 'react-router-dom';
+import StarShipList from './app/components/StarShipList';
+import Header from './app/components/Header';
+import LoadMore from './app/components/LoadMore';
+import { useState } from 'react';
+import Container from './app/components/Container';
+import DetailedShip from './app/components/DetailedShip';
+
 
 function App() {
+
+  const[selectedStarship,setSelectedStarship] = useState();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Routes>
+      <Route path='/' element={<Container setSelectedStarship={setSelectedStarship}/>}/>
+      <Route path='/:id' element={<DetailedShip selectedStarship={selectedStarship}/>}/>
+    </Routes>
+    </>
   );
 }
 
