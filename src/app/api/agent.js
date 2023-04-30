@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+//verilere erişilmesi amacıyla oluşturduğum agent.js dosyası 
 
 axios.defaults.baseURL = 'https://swapi.dev/api';
 

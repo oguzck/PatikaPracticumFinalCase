@@ -14,6 +14,7 @@ function App() {
   const[selectedStarship,setSelectedStarship] = useState();
 
   return (
+    //ReactRouter kullanarak belirtilen idye göre detay ekranına geçilmesini sağladım .
     <>
     <Routes>
       <Route path='/' element={<Container setSelectedStarship={setSelectedStarship}/>}/>
